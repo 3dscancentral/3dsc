@@ -3,4 +3,4 @@ const app = express();
 
 app.get('/', (req, res) => res.send('test'));
 
-app.listen(3000, 'express server started');
+app.listen(3000, 'localhost', 'express server started');
