@@ -1,0 +1,14 @@
+{
+  "name": "3dsc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/3dscancentral/3dsc.git",
+    "type": "git"
+  },
+  "author": "rosscreighton <rosson.creighton@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
