@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const models = require('./models')
+const db = require('./models')
 
 app.get('/', (req, res) => res.send('test'));
 
