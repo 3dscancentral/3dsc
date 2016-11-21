@@ -1,10 +1,11 @@
-const express = require('express');
+import express from 'express';
+import db from './models';
+
 const app = express();
-const db = require('./models')
 
 app.get('/', (req, res) => {
-  db.order.create();
-  db.order.findAll().then(orders => res.send(orders));
+  db.Order.create();
+  db.Order.findAll().then(orders => res.send(orders));
 });
 
-module.exports = app;
+export default app;
