@@ -6,6 +6,9 @@
     "url": "https://github.com/3dscancentral/3dsc.git",
     "type": "git"
   },
+  "scripts": {
+    "start": "node bin/www"
+  },
   "author": "rosscreighton <rosson.creighton@gmail.com>",
   "license": "MIT",
   "dependencies": {
