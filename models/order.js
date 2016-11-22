@@ -1,5 +1,5 @@
-export default (sequelize, DataTypes) => {
-  return sequelize.define("Order", {
+export default (sequelize, DataTypes) => (
+  sequelize.define("Order", {
     status: DataTypes.INTEGER,
     providerId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
@@ -7,4 +7,4 @@ export default (sequelize, DataTypes) => {
     hourlyRate: DataTypes.INTEGER,
     turnAroundTime: DataTypes.INTEGER,
   })
-};
+);
