@@ -1,11 +1,17 @@
 import express from 'express';
-import db from './data/models';
+import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
+import bodyParser from 'body-parser';
+import schema from './data/schema';
 
 const app = express();
 
-app.get('/', (req, res) => {
-  db.Order.create();
-  db.Order.findAll().then(orders => res.send(orders));
-});
+app.use('/graphql', bodyParser.json(), graphqlExpress({
+  schema,
+  context: {},
+}));
+
+app.use('/graphiql', graphiqlExpress({
+  endpointURL: '/graphql',
+}));
 
 export default app;
