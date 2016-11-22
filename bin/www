@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 import app from '../app';
-import models from '../models';
+import db from '../data/models';
 
 // get port from environment and store in Express.
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 // sync models and start server
-models.sequelize.sync().then(function() {
+db.sequelize.sync().then(function() {
   app.listen(port, () => console.log('express server started'))
 });
 
