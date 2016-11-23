@@ -1,0 +1,9 @@
+---
+extends: eslint-config-airbnb
+
+parserOptions:
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+
+rules:
+  arrow-parens: off
