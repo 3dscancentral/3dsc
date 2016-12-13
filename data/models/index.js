@@ -1,15 +1,15 @@
-'use strict';
-
 import fs from 'fs';
 import path from 'path';
 import Sequelize from 'sequelize';
 
-const basename  = path.basename(module.filename);
-const env       = process.env.NODE_ENV || 'development';
-const config    = require('../../config/config.json')[env];
-const db        = {};
+const basename = path.basename(module.filename);
+const env = process.env.NODE_ENV || 'development';
+const config = require('../../config/config.json')[env];
+
+const db = {};
 
 let sequelize;
+
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
@@ -17,7 +17,7 @@ if (config.use_env_variable) {
     config.database,
     config.username,
     config.password,
-    config
+    config,
   );
 }
 
@@ -27,7 +27,7 @@ fs
     (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js')
   ))
   .forEach(file => {
-    const model = sequelize['import'](path.join(__dirname, file));
+    const model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;
   });
 
