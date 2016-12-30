@@ -7,10 +7,8 @@ import db from '../data/models';
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-// sync models and start server
-db.sequelize.sync().then(function() {
-  app.listen(port, () => console.log('express server started'))
-});
+// start server
+app.listen(port, () => console.log('express server started'))
 
 // normalize a port into a number, string, or false.
 function normalizePort(val) {
