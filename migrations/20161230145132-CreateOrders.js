@@ -3,13 +3,9 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('orders', {
+      // how do we specify primary key?
       id: Sequelize.INTEGER,
       status: Sequelize.INTEGER,
-      providerId: Sequelize.INTEGER,
-      userId: Sequelize.INTEGER,
-      deviceId: Sequelize.INTEGER,
-      hourlyRate: Sequelize.INTEGER,
-      turnAroundTime: Sequelize.INTEGER,
     });
   },
 
