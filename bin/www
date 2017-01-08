@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import app from '../app';
-import db from '../data/models';
 
 // get port from environment and store in Express.
 const port = normalizePort(process.env.PORT || '3000');
